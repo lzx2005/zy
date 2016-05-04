@@ -9,7 +9,7 @@ import com.jfinal.plugin.activerecord.generator.Generator;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 
 /**
- * 在数据库表有任何变动时，运行一下 main 方法，极速响应变化进行代码重构
+ * 根据数据库生成实体类
  */
 public class MysqlGenerator {
 	
