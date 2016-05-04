@@ -7,9 +7,11 @@ import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
 import com.jfinal.core.JFinal;
+import com.jfinal.ext.handler.ContextPathHandler;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.zy.controller.IndexController;
+import com.zy.interceptor.GInterceptor;
 import com.zy.model._MappingKit;
 
 public class CommonConfig extends JFinalConfig {
@@ -43,13 +45,13 @@ public class CommonConfig extends JFinalConfig {
 	@Override
 	public void configInterceptor(Interceptors me) {
 		// TODO Auto-generated method stub
-
+		me.add(new GInterceptor());
 	}
 
 	@Override
 	public void configHandler(Handlers me) {
 		// TODO Auto-generated method stub
-
+		me.add(new ContextPathHandler("base"));
 	}
 
 	public static void main(String[] args) {

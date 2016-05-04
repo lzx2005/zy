@@ -1,0 +1,17 @@
+<#include "/WEB-INF/layout/layout.html"/>
+<@layout>
+        <h1 class="page-header">首页</h1>
+		<div class="summernote">
+			这里是富文本编辑器
+		</div>
+	
+	<script>
+	$(function(){ 
+		$('.summernote').summernote({
+			lang: 'zh-CN',
+			height:500
+		});
+	}); 
+	
+	</script>
+</@layout>
